@@ -122,11 +122,15 @@ To add the track, run
 ```sh-session
 # Replace with the location of your BAM file
 jbrowse add-track /data/volvox.bam --load copy
+
+# Alternatively, to keep our files organized, we can add it to a subdirectory bam
+jbrowse add-track /data/volvox.bam --load copy --subDir bam
+
 ```
 
 This will copy the BAM and BAM index into the JBrowse 2 directory and add a
 track pointing at those files to the config file. To see more options adding the
-track, such as specifying a name, run `jbrowse add-track --help`.
+track, such as specifying a name, run `p`.
 
 If you don't want to copy your BAM file, you can use `--move` to move the file
 into the JBrowse 2 directory or `--symlink` to add a symlink to the file to the
